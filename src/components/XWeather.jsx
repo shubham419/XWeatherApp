@@ -45,7 +45,7 @@ const XWeather = () => {
       <button onClick={fetchData}>Search</button>
       {loading? <p>Loading data…</p> : null}
       {apiData ? 
-      <div className={styles.cardWrapper}>
+      <div className={`${styles.cardWrapper} weather-cards`}>
         <WeatherCard title="Temperature" value={`${apiData.current.temp_c}°C`} />
         <WeatherCard title="Humidity"  value={`${apiData.current.humidity}%`} />
         <WeatherCard title="Condition"  value={`${apiData.current.condition.text}`} />
