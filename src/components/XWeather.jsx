@@ -22,7 +22,7 @@ const XWeather = () => {
             throw(data);
         }
         console.log(data);
-        setLoading(false);
+        // setLoading(false);
         setApiData(data);
     }catch (e){
         alert("Failed to fetch weather data")
