@@ -22,7 +22,7 @@ const XWeather = () => {
             throw(data);
         }
         console.log(data);
-        // setLoading(false);
+        setLoading(false);
         setApiData(data);
     }catch (e){
         alert("Failed to fetch weather data")
@@ -43,7 +43,7 @@ const XWeather = () => {
         type="text"
       />
       <button onClick={fetchData}>Search</button>
-      {loading? <p>Loading data…</p> : null}
+      {loading? <p>Loading data...</p> : null}
       {apiData ? 
       <div className={`${styles.cardWrapper} weather-cards`}>
         <WeatherCard title="Temperature" value={`${apiData.current.temp_c}°C`} />
